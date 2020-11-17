@@ -35,104 +35,11 @@ const Jumbotron = () => <div className="jumbotron jumbotron-fluid bg-info text-w
     </div>
 </div>
 
-const Toys = () => <><h1 id="toys" className="display-4 my-4 text-center text-muted">Toys</h1>
+const Toys = (props) => <>
+<h1 id="toys" className="display-4 my-4 text-center text-muted">Toys</h1>
+   <Toys toys={this.props.toys} />
     <div className="row">
-        <div className="col-md-6 col-lg-3">
-            <div className="card mb-3">
-                <img className="card-img-top" src={require('./img/1.png')} alt="wahala dey" />
-                <div className="card-body">
-                    <h4 className="card-title text-center">Toy One</h4>
-                    <p className="card-text">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s.
-        </p>
-                </div>
-            </div>
-        </div>
-        <div className="col-md-6 col-lg-3">
-            <div className="card mb-3">
-                <img className="card-img-top" src={require('./img/2.png')} alt="wahala dey" />
-                <div className="card-body">
-                    <h4 className="card-title text-center">Toy Two</h4>
-                    <p className="card-text">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s.
-                         </p>
-                </div>
-            </div>
-        </div>
-        <div className="col-md-6 col-lg-3">
-            <div className="card mb-3">
-                <img className="card-img-top" src={require('./img/3.png')} alt="wahala dey" />
-                <div className="card-body">
-                    <h4 className="card-title text-center">Toy Three</h4>
-                    <p className="card-text">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s.
-                </p>
-                </div>
-            </div>
-        </div>
-        <div className="col-md-6 col-lg-3">
-            <div className="card mb-3">
-                <img className="card-img-top" src={require('./img/4.png')} alt="wahala dey" />
-                <div className="card-body">
-                    <h4 className="card-title text-center">Toy Four</h4>
-                    <p className="card-text">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s.
-        </p>
-                </div>
-            </div>
-        </div>
-        <div className="col-md-6 col-lg-3">
-            <div className="card mb-3">
-                <img className="card-img-top" src={require('./img/5.png')} alt="wahala dey" />
-                <div className="card-body">
-                    <h4 className="card-title text-center">Toy Five</h4>
-                    <p className="card-text">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s.
-        </p>
-                </div>
-            </div>
-        </div>
-        <div className="col-md-6 col-lg-3">
-            <div className="card mb-3">
-                <img className="card-img-top" src={require('./img/6.png')} alt="wahala dey" />
-                <div className="card-body">
-                    <h4 className="card-title text-center">Toy Six</h4>
-                    <p className="card-text">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s.
-        </p>
-                </div>
-            </div>
-        </div>
-        <div className="col-md-6 col-lg-3">
-            <div className="card mb-3">
-                <img className="card-img-top" src={require('./img/7.png')} alt="wahala dey" />
-                <div className="card-body">
-                    <h4 className="card-title text-center">Toy Seven</h4>
-                    <p className="card-text">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s.
-        </p>
-                </div>
-            </div>
-        </div>
-        <div className="col-md-6 col-lg-3">
-            <div className="card mb-3">
-                <img className="card-img-top" src={require('./img/8.png')} alt="wahala dey" />
-                <div className="card-body">
-                    <h4 className="card-title text-center">Toy Eight</h4>
-                    <p className="card-text">
-                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-                        the industry's standard dummy text ever since the 1500s.
-        </p>
-                </div>
-            </div>
-        </div>
+       {props.toys.map((toy, index)=> <Card key={index} toy={toy} />)}
     </div>
 </>
 
@@ -149,4 +56,61 @@ const Footer = () => <div className="row py-3">
     </div>
 </div>
 
-ReactDOM.render(<Application />, document.getElementById('root'));
+const Description = () => <>Lorem Ipsum is simply dummy text of the printing
+and typesetting industry. Lorem Ipsum has been
+the industry's standard dummy text ever since the 1500s.</>
+
+const toys = [
+    {
+        name: 'Toy One',
+        description: <Description />,
+        image: '1'
+    },
+    {
+        name: 'Toy Two',
+        description: <Description />,
+        image: '2'
+    },
+    {
+        name: 'Toy Three',
+        description: <Description />,
+        image: '3'
+    },
+    {
+        name: 'Toy Four',
+        description: <Description />,
+        image: '4'
+    },
+    {
+        name: 'Toy Five',
+        description: <Description />,
+        image: '5'
+    },
+    {
+        name: 'Toy Six',
+        description: <Description />,
+        image: '6'
+    },
+    {
+        name: 'Toy Seven',
+        description: <Description />,
+        image: '7'
+    },
+    {
+        name: 'Toy Eight',
+        description: <Description />,
+        image: '8'
+    }
+];
+
+const Card =(props)=><div className="col-md-6 col-lg-3">
+<div className="card mb-3">
+    <img className="card-img-top" src={require('./img/${props.toys.image}.png')} alt="wahala dey" />
+    <div className="card-body">
+        <h4 className="card-title text-center">{props.toy.name}</h4>
+        <p className="card-text"> {props.toy.description}
+</p>
+    </div>
+</div>
+</div>
+ReactDOM.render(<Application toys={toys}/>, document.getElementById('root'));

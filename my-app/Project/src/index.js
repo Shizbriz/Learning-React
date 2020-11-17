@@ -39,7 +39,7 @@ const Toys = () => <><h1 id="toys" className="display-4 my-4 text-center text-mu
     <div className="row">
         <div className="col-md-6 col-lg-3">
             <div className="card mb-3">
-                <img className="card-img-top" src={require('./img/1.png')} alt="wahala dey" />
+                <img className="card-img-top" src='./img/1.png' alt="wahala dey" />
                 <div className="card-body">
                     <h4 className="card-title text-center">Toy One</h4>
                     <p className="card-text">
@@ -51,7 +51,7 @@ const Toys = () => <><h1 id="toys" className="display-4 my-4 text-center text-mu
         </div>
         <div className="col-md-6 col-lg-3">
             <div className="card mb-3">
-                <img className="card-img-top" src={require('./img/2.png')} alt="wahala dey" />
+                <img className="card-img-top" src="img/2.png" alt="wahala dey" />
                 <div className="card-body">
                     <h4 className="card-title text-center">Toy Two</h4>
                     <p className="card-text">
@@ -63,7 +63,7 @@ const Toys = () => <><h1 id="toys" className="display-4 my-4 text-center text-mu
         </div>
         <div className="col-md-6 col-lg-3">
             <div className="card mb-3">
-                <img className="card-img-top" src={require('./img/3.png')} alt="wahala dey" />
+                <img className="card-img-top" src="img/3.png" alt="wahala dey" />
                 <div className="card-body">
                     <h4 className="card-title text-center">Toy Three</h4>
                     <p className="card-text">
@@ -75,7 +75,7 @@ const Toys = () => <><h1 id="toys" className="display-4 my-4 text-center text-mu
         </div>
         <div className="col-md-6 col-lg-3">
             <div className="card mb-3">
-                <img className="card-img-top" src={require('./img/4.png')} alt="wahala dey" />
+                <img className="card-img-top" src="img/4.png" alt="wahala dey" />
                 <div className="card-body">
                     <h4 className="card-title text-center">Toy Four</h4>
                     <p className="card-text">
@@ -87,7 +87,7 @@ const Toys = () => <><h1 id="toys" className="display-4 my-4 text-center text-mu
         </div>
         <div className="col-md-6 col-lg-3">
             <div className="card mb-3">
-                <img className="card-img-top" src={require('./img/5.png')} alt="wahala dey" />
+                <img className="card-img-top" src="img/5.png" alt="wahala dey" />
                 <div className="card-body">
                     <h4 className="card-title text-center">Toy Five</h4>
                     <p className="card-text">
@@ -99,7 +99,7 @@ const Toys = () => <><h1 id="toys" className="display-4 my-4 text-center text-mu
         </div>
         <div className="col-md-6 col-lg-3">
             <div className="card mb-3">
-                <img className="card-img-top" src={require('./img/6.png')} alt="wahala dey" />
+                <img className="card-img-top" src="img/6.png" alt="wahala dey" />
                 <div className="card-body">
                     <h4 className="card-title text-center">Toy Six</h4>
                     <p className="card-text">
@@ -111,7 +111,7 @@ const Toys = () => <><h1 id="toys" className="display-4 my-4 text-center text-mu
         </div>
         <div className="col-md-6 col-lg-3">
             <div className="card mb-3">
-                <img className="card-img-top" src={require('./img/7.png')} alt="wahala dey" />
+                <img className="card-img-top" src="img/7.png" alt="wahala dey" />
                 <div className="card-body">
                     <h4 className="card-title text-center">Toy Seven</h4>
                     <p className="card-text">
@@ -123,7 +123,7 @@ const Toys = () => <><h1 id="toys" className="display-4 my-4 text-center text-mu
         </div>
         <div className="col-md-6 col-lg-3">
             <div className="card mb-3">
-                <img className="card-img-top" src={require('./img/8.png')} alt="wahala dey" />
+                <img className="card-img-top" src="img/8.png" alt="wahala dey" />
                 <div className="card-body">
                     <h4 className="card-title text-center">Toy Eight</h4>
                     <p className="card-text">
@@ -149,4 +149,3 @@ const Footer = () => <div className="row py-3">
     </div>
 </div>
 
-ReactDOM.render(<Application />, document.getElementById('root'));

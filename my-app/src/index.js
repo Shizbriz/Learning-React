@@ -5,10 +5,15 @@ const Application = () =>
     <>
         <Nav />
         <Jumbotron />
-        <Toys />
+        <div className="container pt-4">
+        <Toys toys={toys} />
+        <hr/>
         <Footer />
+        </div>
+        
     </>
-const Nav = () => <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+const Nav = () => 
+<nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
     <div className="container">
         <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
             aria-controls="navbarNavAltMarkup"
@@ -37,7 +42,6 @@ const Jumbotron = () => <div className="jumbotron jumbotron-fluid bg-info text-w
 
 const Toys = (props) => <>
 <h1 id="toys" className="display-4 my-4 text-center text-muted">Toys</h1>
-   <Toys toys={this.props.toys} />
     <div className="row">
        {props.toys.map((toy, index)=> <Card key={index} toy={toy} />)}
     </div>
@@ -59,6 +63,18 @@ const Footer = () => <div className="row py-3">
 const Description = () => <>Lorem Ipsum is simply dummy text of the printing
 and typesetting industry. Lorem Ipsum has been
 the industry's standard dummy text ever since the 1500s.</>
+
+
+const Card =(props)=><div className="col-md-6 col-lg-3">
+<div className="card mb-3">
+    <img className="card-img-top" src={require(`./img/${props.toy.image}.png`)} alt="wahala dey" />
+    <div className="card-body">
+        <h4 className="card-title text-center">{props.toy.name}</h4>
+        <p className="card-text"> {props.toy.description}
+</p>
+    </div>
+</div>
+</div>
 
 const toys = [
     {
@@ -103,14 +119,4 @@ const toys = [
     }
 ];
 
-const Card =(props)=><div className="col-md-6 col-lg-3">
-<div className="card mb-3">
-    <img className="card-img-top" src={require('./img/${props.toys.image}.png')} alt="wahala dey" />
-    <div className="card-body">
-        <h4 className="card-title text-center">{props.toy.name}</h4>
-        <p className="card-text"> {props.toy.description}
-</p>
-    </div>
-</div>
-</div>
 ReactDOM.render(<Application toys={toys}/>, document.getElementById('root'));
